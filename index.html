@@ -7,6 +7,7 @@
 
   <link rel="stylesheet" href="Resources/Styles/styles.css" />
   <link rel="stylesheet" href="Resources/Styles/about_us.css" />
+  <link rel="stylesheet" href="Resources/Styles/parallax.css" />
 
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -22,46 +23,50 @@
     <header>
       <!-- NAVBAR -->
       <div class="navBar">
-        <nav role="navigation">
-          <div id="menuToggle">
-            <!--
+        <!-- <nav role="navigation"> -->
+        <div id="menuToggle">
+          <!--
                       A fake / hidden checkbox is used as click reciever,
                       so you can use the :checked selector on it.
                       -->
-            <input type="checkbox" />
+          <input type="checkbox" />
 
-            <!--
+          <!--
                       Some spans to act as a hamburger.
                       
                       They are acting like a real hamburger,
                       not that McDonalds stuff.
                       -->
-            <span></span>
-            <span></span>
-            <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
 
-            <!--
+          <!--
                       Too bad the menu has to be inside of the button
                       but hey, it's pure CSS magic.
                       -->
-            <ul id="menu">
-              <li><a href="index.html">Home</a></li>
-              <li><a href="#aboutus">About</a></li>
-              <li><a href="#pricing">Pricing</a></li>
-              <li><a href="#contactus">Contact</a></li>
-            </ul>
-          </div>
-        </nav>
+          <ul id="menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#aboutus">About</a></li>
+            <li><a href="#pricing">Pricing</a></li>
+            <li><a href="#contactus">Contact</a></li>
+          </ul>
+        </div>
+        <!-- </nav> -->
       </div>
     </header>
     <!-- COMIENZO DE LA MAIN -->
     <main>
       <div class="main">
         <!-- ENCABEZADO -->
-        <section class="title" style="padding: 3%">
-          <h1>ROAD TO THE FAKIN MOON</h1>
-          <h3>We make your vision a web reality</h3>
-        </section>
+        <div class="title header" style="padding: 3%">
+          <!-- <h1>ROAD TO THE FAKIN MOON</h1>
+          <h3>We make your vision a web reality</h3> -->
+          <div id="bg">
+            <h1 id="txt">ROAD TO THE FAKIN MOON</h1>
+            <h3 id="txt1">We make your vision a web reality</h3>
+          </div>
+        </div>
 
         <div class="separador">
           <br />
@@ -134,75 +139,6 @@
               <!-- ABOUT US -->
               <section class="aboutUs d-flex flex-column align-items-center" id="aboutus">
                 <h2 style="margin: 3%">Our Team</h2>
-                <!-- <h2 style="color: var(--maincolor); margin: 3%">About Us...</h2>
-                <div class="mb-4 row" style="max-width: 100%">
-                  <div class="col-md-5 mx-auto">
-                    <article class="mb-3 cardNuestra" style="
-                    background-color: var(--maincolor);
-                    border-radius: 10px;
-                  ">
-                      <div class="card" style="background-color: var(--maincolor); color: white">
-                        <img src="Resources/assets/fotopablo.JPG" class="card-img-top"
-                          alt="Pablo Gabriel Donato picture" style="
-                        max-width: 200px;
-                        max-height: 300px;
-                        margin-left: auto;
-                        margin-right: auto;
-                        border-radius: 100px;
-                        padding: 5%;
-                      " />
-                        <div class="card-body">
-                          <h3 class="card-title text-center">Pabloski</h3>
-                          <p class="card-text text-center">
-                            Some quick example text to build on the card title and
-                            make up the bulk of the card's content.
-                          </p>
-                          <div class="text-center">
-                            <a href="https://github.com/PabloGabrielDonato" target="_blank" class="btn btn-primary"
-                              style="
-                            background-color: var(--thirdcolor);
-                            border-color: var(--thirdcolor);
-                            color: white;
-                          ">Visit my GitHub profile!</a>
-                          </div>
-                        </div>
-                      </div>
-                    </article>
-                  </div>
-                  <div class="col-md-5 mx-auto">
-                    <article class="mb-3 cardNuestra" style="
-                    background-color: var(--maincolor);
-                    border-radius: 10px;
-                  ">
-                      <div class="card" style="background-color: var(--maincolor); color: white">
-                        <img src="Resources/assets/fotopablo.JPG" class="card-img-top"
-                          alt="Pablo Gabriel Donato picture" style="
-                        max-width: 200px;
-                        max-height: 300px;
-                        margin-left: auto;
-                        margin-right: auto;
-                        border-radius: 100px;
-                        padding: 5%;
-                      " />
-                        <div class="card-body">
-                          <h3 class="card-title text-center">Pabloski</h3>
-                          <p class="card-text text-center">
-                            Some quick example text to build on the card title and
-                            make up the bulk of the card's content.
-                          </p>
-                          <div class="text-center">
-                            <a href="https://github.com/PabloGabrielDonato" target="_blank" class="btn btn-primary"
-                              style="
-                            background-color: var(--thirdcolor);
-                            border-color: var(--thirdcolor);
-                            color: white;
-                          ">Visit my GitHub profile!</a>
-                          </div>
-                        </div>
-                      </div>
-                    </article>
-                  </div>
-                </div> -->
                 <div class="containerCards">
                   <div class="card" data-aos="zoom-out-up">
                     <div class="content">
@@ -421,12 +357,39 @@
   <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="/RoadToTheMoon/Resources/js/index.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
   <script>
     AOS.init({
       duration: 1000, //
     });
   </script>
   <script src="https://kit.fontawesome.com/d8c4cf2db5.js" crossorigin="anonymous"></script>
+  <script>
+    // Animación PARALLAX
+    var headerBg = document.getElementById('bg');
+    window.addEventListener('scroll', function () {
+      headerBg.style.opacity = 1 - +window.pageYOffset / 350 + '';
+      headerBg.style.top = +window.pageYOffset + 'px';
+      headerBg.style.backgroundPositionY = +window.pageYOffset / 10 + 'px';
+    });
+
+    // Animación TEXTO parallax
+    gsap.from("#txt", {
+      scrollTrigger: {
+        scrub: true
+      },
+      x: 700,
+    })
+
+    gsap.from("#txt1", {
+      scrollTrigger: {
+        scrub: true
+      },
+      x: -700,
+    })
+  </script>
+
 </body>
 
 </html>
