@@ -1,0 +1,37 @@
+.slides .list {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  z-index: -1;
+}
+.slides .slide {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+.slide .background {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background-position: center;
+  will-change: transform;
+  background-size: cover;
+}
+
+#txt_ot {
+  position: absolute;
+  color: transparent !important;
+  -webkit-text-stroke: 2px var(--fourthcolor) !important;
+  margin-top: 0;
+  left: -400px;
+  z-index: 1;
+  font-size: 20em;
+  -webkit-filter: blur(2.5px);
+}

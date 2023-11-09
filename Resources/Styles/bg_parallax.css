@@ -1,0 +1,17 @@
+.aboutUs,
+.containerServices {
+  overflow: hidden;
+}
+.cardService {
+  z-index: 1;
+}
+.bg {
+  position: absolute;
+  opacity: 0.2;
+}
+
+h2 {
+  margin: 3% !important;
+  text-shadow: 1px 1px 3px black;
+  z-index: 2;
+}
